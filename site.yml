@@ -1,0 +1,10 @@
+---
+- hosts: servers
+  become: yes
+  vars_files:
+    - ./group_vars/main.yml
+  roles:
+    - role: common
+    - role: mariadb
+    - role: nginx 
+    - role: nextcloud
